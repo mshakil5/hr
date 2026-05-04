@@ -167,7 +167,7 @@ class EmployeeController extends Controller
                 'name'=>$request->name,
                 'email'=>$request->email,
                 'password'=>$request->password,
-                'photo'=>$userphoto,
+                'photo'=>$userphoto ?? '',
                 'username'=>$request->username,
                 'branch_id' => $request->branch_id ?? Auth::user()->branch_id,
                 'role_id' => is_numeric($request->role_id) ? (int)$request->role_id : null
