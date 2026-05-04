@@ -24,7 +24,7 @@ class EmployeeController extends Controller
     public function index(Request $request)
     {
         if (Auth::user()->is_type == '1') {
-            $query = Employee::with('user.branch')->orderBy('id', 'DESC')->get();
+            $query = Employee::with('user.branch')->where('branch_id', Auth::user()->branch_id)->orderBy('id', 'DESC')->get();
         } else {
             $query = Employee::with('user.branch')->where('branch_id', Auth::user()->branch_id)->orderBy('id', 'DESC')->get();
         }

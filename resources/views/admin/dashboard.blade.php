@@ -253,7 +253,7 @@
         </div>
     </section>
 
-    <section class="content">
+    <section class="content d-none">
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">

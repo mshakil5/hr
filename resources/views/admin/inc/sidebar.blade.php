@@ -22,7 +22,7 @@
       @endif
 
       @if (auth()->user()->canDo([27, 28, 29, 30, 31]))
-      <li class="nav-item dropdown {{ request()->is('admin/settings*') ? 'menu-open' : '' }}">
+      <li class="nav-item dropdown  d-none {{ request()->is('admin/settings*') ? 'menu-open' : '' }}">
           <a href="#" class="nav-link dropdown-toggle {{ request()->is('admin/settings*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-blog"></i>
               <p>
@@ -63,7 +63,7 @@
       @endif
 
       @if (auth()->user()->canDo([5, 6, 7]))
-      <li class="nav-item">
+      <li class="nav-item  d-none">
         <a href="{{route('branches.index')}}" class="nav-link {{ (request()->is('admin/branches*')) ? 'active' : '' }}">
          <i class="fas fa-users"></i>
           <p>
@@ -159,7 +159,7 @@
       
       
 
-      <li class="nav-item dropdown {{ request()->is('admin/asset-type') || request()->is('admin/location') || request()->is('admin/asset') || request()->routeIs('stock') || request()->routeIs('maintenance.index') || request()->routeIs('floors') || request()->routeIs('faultyProducts') ? 'menu-open' : '' }}">
+      <li class="nav-item dropdown  d-none {{ request()->is('admin/asset-type') || request()->is('admin/location') || request()->is('admin/asset') || request()->routeIs('stock') || request()->routeIs('maintenance.index') || request()->routeIs('floors') || request()->routeIs('faultyProducts') ? 'menu-open' : '' }}">
           <a href="#" class="nav-link dropdown-toggle bg-success {{ request()->is('admin/asset-type') || request()->is('admin/location') || request()->is('admin/asset') || request()->routeIs('stock') || request()->routeIs('maintenance.index') || request()->routeIs('floors') || request()->routeIs('faultyProducts') ? 'active' : '' }}">
               <i class="nav-icon fas fa-blog"></i>
               <p>
@@ -226,7 +226,7 @@
       
       @if (auth()->user()->canDo([23, 24, 25, 26, 35]))
       <li class="nav-item dropdown {{ request()->is('admin/report*') ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link dropdown-toggle bg-primary {{ request()->is('admin/blogs*') ? 'active' : '' }}">
+          <a href="#" class="nav-link dropdown-toggle bg-success {{ request()->is('admin/blogs*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-blog"></i>
               <p>
                   Report <i class="fas fa-angle-left right"></i>
@@ -264,7 +264,7 @@
               </li>
               @endif
               @if (auth()->user()->canDo(26))
-              <li class="nav-item">
+              <li class="nav-item  d-none">
                   <a href="{{ route('stockStaffReport') }}" class="nav-link {{ request()->routeIs('stockStaffReport') ? 'active' : '' }}">
                       <i class="fas fa-tags nav-icon"></i>
                       <p>Staff Based Stock Report</p>

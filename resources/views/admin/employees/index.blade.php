@@ -429,7 +429,7 @@
                     <div class="card-header">
                         <h3 class="card-title">All Data</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body d-none">
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label for="branchFilter">Filter by Branch:</label>
