@@ -33,7 +33,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="{{route('homepage')}}">
         {{-- <img src="{{ asset('images/company/' . $company->logo) }}" class="navbar-brand-img h-100" alt="main_logo"> --}}
-        <h3 class="ms-1 font-weight-bold">Diamonds</h3>
+        <h3 class="ms-1 font-weight-bold">HR</h3>
       </a>
     </div>
     <hr class="horizontal dark mt-0">

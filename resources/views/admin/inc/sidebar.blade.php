@@ -123,7 +123,7 @@
       </li>
 
       @if (auth()->user()->canDo([17, 18, 19]))
-      <li class="nav-item">
+      <li class="nav-item d-none">
         <a href="{{route('products.index')}}" class="nav-link bg-info {{ (request()->is('admin/products*')) ? 'active' : '' }}">
          <i class="fas fa-users"></i>
           <p>
@@ -134,7 +134,7 @@
       @endif
 
       @if (auth()->user()->canDo([20, 21, 22]))
-      <li class="nav-item">
+      <li class="nav-item  d-none">
         <a href="{{route('stocks.index')}}" class="nav-link {{ (request()->is('admin/stocks*')) ? 'active' : '' }}">
          <i class="fas fa-users"></i>
           <p>
@@ -145,7 +145,7 @@
       @endif
 
       @if (auth()->user()->canDo([32]))
-      <li class="nav-item">
+      <li class="nav-item d-none">
         <a href="{{route('roomcheck')}}" class="nav-link {{ (request()->is('admin/room-check*')) ? 'active' : '' }}">
          <i class="fas fa-users"></i>
           <p>
@@ -206,7 +206,7 @@
                   </a>
               </li>
           </ul>
-          <ul class="nav nav-treeview">
+          <ul class="nav nav-treeview d-none">
               <li class="nav-item">
                   <a href="{{ route('faultyProducts') }}" class="nav-link {{ request()->routeIs('faultyProducts') ? 'active' : '' }}">
                       <i class="fas fa-list nav-icon"></i>
@@ -241,7 +241,7 @@
                   </a>
               </li>
               @endif
-              <li class="nav-item">
+              <li class="nav-item d-none">
                   <a href="{{ route('assetStockReport') }}" class="nav-link {{ request()->routeIs('assetStockReport') ? 'active' : '' }}">
                       <i class="fas fa-tags nav-icon"></i>
                       <p>Asset Stock Report</p>
@@ -256,7 +256,7 @@
               </li>
               @endif
               @if (auth()->user()->canDo(25))
-              <li class="nav-item">
+              <li class="nav-item d-none">
                   <a href="{{ route('stockReport') }}" class="nav-link {{ request()->routeIs('stockReport') ? 'active' : '' }}">
                       <i class="fas fa-list nav-icon"></i>
                       <p>Laundry Stock Report</p>
@@ -270,7 +270,7 @@
                       <p>Staff Based Stock Report</p>
                   </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item  d-none">
                   <a href="{{ route('dirtyStockReport') }}" class="nav-link {{ request()->routeIs('dirtyStockReport') ? 'active' : '' }}">
                       <i class="fas fa-tags nav-icon"></i>
                       <p>Dirty Stock Report</p>
@@ -279,7 +279,7 @@
               @endif
               
               @if (auth()->user()->canDo(35))
-              <li class="nav-item">
+              <li class="nav-item d-none">
                   <a href="{{ route('inspectionReport') }}" class="nav-link {{ request()->routeIs('inspectionReport') ? 'active' : '' }}">
                       <i class="fas fa-list nav-icon"></i>
                       <p>Inspection Report</p>
@@ -291,7 +291,7 @@
       @endif
 
       @if (auth()->user()->canDo([33, 34 ]))
-            <li class="nav-item dropdown {{ request()->is('admin/checklist-items*') || request()->is('admin/checklist-categories*') ? 'menu-open' : '' }}">
+            <li class="nav-item dropdown  d-none {{ request()->is('admin/checklist-items*') || request()->is('admin/checklist-categories*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link dropdown-toggle {{ request()->is('admin/checklist-items*') || request()->is('admin/checklist-categories*') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-blog"></i>
                     <p>

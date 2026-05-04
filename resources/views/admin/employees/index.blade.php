@@ -573,7 +573,7 @@
             </div>
             <div class="paySlip" id="payslipContent" style="display: none;">
                 <div class="infoPrint text-center">
-                    <h3>Diamonds Guest House</h3>
+                    <h3>Company</h3>
                     <h5>Staff Pay Report</h5>
                 </div>
                 <div class="row_first">
@@ -629,12 +629,12 @@
                 <div class="row_third">
                     <div>
                         <p class="font-weight-bold">
-                            Diamonds Guest House<br>
+                            Company Name<br>
                             York, Yorkshire, UK
                         </p>
                     </div>
                     <div>
-                        <p class="slip-title">Diamonds Guest House</p>
+                        <p class="slip-title">Company Name</p>
                         <table class="manipulate">
                             <tr>
                                 <td><span>Hourly Based Amount</span></td>
